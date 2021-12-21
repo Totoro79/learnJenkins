@@ -13,11 +13,11 @@
 *.ear
 
 ### Gradle ###
-.gradle
 */build/
-gradlew
 gradlew.bat
-/gradle
+#/gradle
+.gradle
+#gradlew
 
 # Ignore Gradle GUI config
 gradle-app.setting
