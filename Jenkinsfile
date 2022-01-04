@@ -17,7 +17,7 @@ pipeline {
 
         stage('Test Log') {
           steps {
-            writeFile(file: 'LogTestFile.txt', text: 'This is an automation file log with ${chromeDriverPath}.')
+            writeFile(file: 'LogTestFile.txt', text: '"This is an automation file log with ${chromeDriverPath}."')
           }
         }
 
