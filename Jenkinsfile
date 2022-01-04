@@ -30,7 +30,6 @@ pipeline {
 
     stage('Deploy') {
       parallel {
-
         when {
           branch 'master'
         }
