@@ -43,4 +43,7 @@ pipeline {
     }
 
   }
+  environment {
+    chromeDriverPath = 'C:\\local\\chrome.exe'
+  }
 }
