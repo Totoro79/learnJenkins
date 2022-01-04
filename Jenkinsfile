@@ -29,10 +29,10 @@ pipeline {
     }
 
     stage('Deploy') {
+      when {
+        branch 'main'
+      }
       parallel {
-        when {
-          branch 'master'
-        }
         stage('Deploy') {
           steps {
             echo 'Deploy the application'
