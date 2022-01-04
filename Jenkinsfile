@@ -32,7 +32,7 @@ pipeline {
       parallel {
 
         when {
-          Branch 'master'
+          branch 'master'
         }
         stage('Deploy') {
           steps {
