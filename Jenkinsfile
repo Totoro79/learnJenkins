@@ -12,12 +12,16 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Test application'
+            echo "Get the driver path ${ChromeDriverPath}"
           }
         }
 
         stage('Test Log') {
+          environment{
+            LocalVariable = "Hello Local"
+          }
           steps {
-            writeFile(file: 'LogTestFile.txt', text: 'This is an automation file log with ${chromeDriverPath}.')
+            writeFile(file: 'LogTestFile.txt', text: "This is an automation file log with ${ChromeDriverPath} and local variable ${LocalVariable}.")
           }
         }
 
@@ -44,6 +48,6 @@ pipeline {
 
   }
   environment {
-    chromeDriverPath = 'C:\\local\\chrome.exe'
+    ChromeDriverPath = 'C:\\local\\chrome.exe'
   }
 }
